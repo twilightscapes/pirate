@@ -20,13 +20,15 @@ Your website is a Progressive Web App (PWA), which means you can access it seaml
 
 But PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations. And with the ability to create custom timelines by "liking" websites you enjoy, you can curate your own personalized experience.
 
+## But wait, there is more...
 
+PIRATE is ALSO:
 
-A Complete Website / Web App Platform with multimedia blog and customizable resume, cover letter and skills and notes pages with integrated contact forms. 
+A Complete Website/Web App Platform with multimedia blog and customizable resume, cover letter and skills and notes pages with integrated contact forms.
 
-Built into PIRATE is also a social network that allows you to interact with other PIRATE users.
+Basically, PIRATE enables you to have YOUR OWN space on the web, where you can be confident that the content you produce is FULLY in your control. Twitter and other social media sites may change or come and go. With PIRATE, that doesn't matter - your content you share, is ALWAYS under your control. 
 
-PIRATE is built to operate using FREE Cloud Based Services
+PIRATE is built to operate using FREE Cloud Based Services. This means that your PIRATE account is basically free to operate month to month with no cost. You only pay a metered cost for what you use over their generous limits. 
 
 ## Features
 
