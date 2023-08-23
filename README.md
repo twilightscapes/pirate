@@ -14,17 +14,17 @@
 
 PIRATE is not your typical social network. It's a decentralized network of individual owned personal websites acting together as a new social content distribution model. 
 
-Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free hosting and services for your PIRATE platorm.  Your individual website, hosted on Netlify, becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to, as it's on your OWN website.
+Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your PIRATE platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
 
-Your website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any device. With Netlify CMS and Netlify Identity, you have the tools to easily edit your homepage, update your profile, and publish engaging blog posts. Making it super easy to get started, without any complicated technical barriers.
+Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any device giving you the tools to easily edit your homepage, update your profile, and publish engaging posts. Making it super easy to get started, without any complicated technical barriers. Being a PWA also means there are no App Stores to worry about!
 
-But PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
+PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
 
 ## But wait, there is more...
 
 PIRATE is ALSO:
 
-A complete website/web app platform with multimedia blog, that you can use however you wish. Configurable through the built in Content Management System PIRATE comes with a customizable profile page and timeline. It also comes with a custom resume, cover letter and skills and notes pages with integrated contact forms that send directly to any email address.
+A complete website/web app platform with multimedia blog, that you can use however you wish. Configurable through the built in Content Management System, PIRATE comes with a customizable profile page and timeline. It also comes with a custom resume, cover letter and skills and notes pages with integrated contact forms that send directly to any email address.
 
 Basically, PIRATE enables you to have YOUR OWN space on the web, where you can be confident that the content you produce is FULLY in your control. Twitter and other social media sites may change or come and go. With PIRATE, that doesn't matter - your content you share, is ALWAYS under your control. 
 
@@ -58,16 +58,16 @@ Once you are in your Netlify CMS, you can navigate to Posts and Pages. Here you 
 
 You can select any existing post or page to start editing or add a **New Post**.
 
-Have fun :)
+
 
 ## ⚙ Customizing Site details
 
 You can find all the website settings such website Site title, Website URL, Google anlaytics etc,.. in your Netlify CMS `Admin > Settings > General`
 
 
-## 🙏 Thank you
+## Thank you
 
-We really appreciate you choosing to build your resume and portfolio with PIRATE!
+We're glad you've decided to sail the high seas with PIRATE!
 
 [PirateSocial]: https://piratesocial.org
 [gatsby]: https://gatsbyjs.org
