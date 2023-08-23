@@ -1,4 +1,4 @@
-> **Update** CompleteWeb is now built with the latest version of Gatsby
+> **Update** PIRATE is now available in a preliminary ALPHA version.
 
 ---
 
@@ -6,7 +6,7 @@
 
 # PIRATE - a decentralized social media website app
 
-PIRATE is now available in a preliminary ALPHA version. 
+ 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg)
 
@@ -50,17 +50,15 @@ PIRATE is built to operate using FREE Cloud Based Services. This means that your
 ## ⚙ Access to Netlify CMS
 
 - Goto app.netlify.com > select your website from the list
-- Goto identity and Click **Enable Identiy**
-- Click on **Invite Users** and invite yourself. You will receive an email and you need to accept the invitation to set the password.
-- Now headover to Settings > Identity > Services and **Enable Git Gateway**
-- You can also manage who can register and log in to your CMS. Goto Settings > Identity > Registration >Registration Preferences. I would prefer to keep it to **Invite Only**, if i am the only one using it.
 - Now, goto to **site-name.netlify.app/admin/**, and login with your credentials.
 
-## 📝 Editing content and Adding posts
+## Editing content and Adding posts
 
 Once you are in your Netlify CMS, you can navigate to Posts and Pages. Here you will find a list of existing pages and posts.
 
-You can select any existing post or page to start editing or add a **New Post**. Have fun :)
+You can select any existing post or page to start editing or add a **New Post**.
+
+Have fun :)
 
 ## ⚙ Customizing Site details
 
@@ -71,7 +69,7 @@ You can find all the website settings such website Site title, Website URL, Goog
 
 We really appreciate you choosing to build your resume and portfolio with PIRATE!
 
-[CompleteWeb]: https://piratesocial.org
+[PirateSocial]: https://piratesocial.org
 [gatsby]: https://gatsbyjs.org
 [netlifycms]: https://www.netlifycms.org
 [custom-domain]: https:/piratesocial.org/adding-custom-domain-netlify
