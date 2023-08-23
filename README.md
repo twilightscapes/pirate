@@ -12,9 +12,9 @@
 
 
 
-PIRATE is not your typical social network. It's a decentralized network of individual owned personal websites acting together as a new social content distribution model. 
+PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model. 
 
-Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your PIRATE platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
+Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your own PIRATE platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
 
 PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
 
