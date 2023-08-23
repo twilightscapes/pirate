@@ -8,15 +8,15 @@
 
  
 
-INSTALL PIRATE: &nbsp; [![Deploys to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg) &nbsp; (install takes about 4 minutes)
+INSTALL PIRATE: &nbsp; [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg) &nbsp; (install takes about 4 minutes)
 
 
 
 PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model. 
 
-Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your own PIRATE platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
+Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your own platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
 
-PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
+More than just a collection of individual websites, PIRATE uses the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
 
 Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about! 
 
