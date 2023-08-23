@@ -4,7 +4,7 @@
 
 
 
-# PIRATE
+# PIRATE - a decentralized social media website app
 
 PIRATE is now available in a preliminary ALPHA version. 
 
