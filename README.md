@@ -16,9 +16,11 @@ PIRATE is not your typical social network. It's a decentralized network of indiv
 
 Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your PIRATE platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
 
-Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any device giving you the tools to easily edit your homepage, update your profile, and publish engaging posts. Making it super easy to get started, without any complicated technical barriers. Being a PWA also means there are no App Stores to worry about!
-
 PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
+
+Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about! 
+
+PIRATE gives you the tools to easily edit your homepage, update your profile, and publish engaging posts. It's super easy to get started, without any complicated technical barriers. 
 
 ## But wait, there is more...
 
