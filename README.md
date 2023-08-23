@@ -10,6 +10,18 @@ PIRATE is now available in a preliminary ALPHA version.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg)
 
+
+
+PIRATE is not your typical social network. It's a decentralized network of individuals, each with their own personal website acting as their social network account. And the best part? It's completely free! With PIRATE, you have the power to take control of your online presence like never before.
+
+Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to provide free hosting and services. Your individual website, hosted on Netlify, becomes your hub for social interaction. It's a personal website and a social network rolled into one.
+
+Your website is a Progressive Web App (PWA), which means you can access it seamlessly from any device. With Netlify CMS and Netlify Identity, you have the tools to easily edit your homepage, update your profile, and publish engaging blog posts. It's all in your hands, without any complicated technical barriers.
+
+But PIRATE is more than just a collection of individual websites. Through the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the PIRATE network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations. And with the ability to create custom timelines by "liking" websites you enjoy, you can curate your own personalized experience.
+
+
+
 A Complete Website / Web App Platform with multimedia blog and customizable resume, cover letter and skills and notes pages with integrated contact forms. 
 
 Built into PIRATE is also a social network that allows you to interact with other PIRATE users.
