@@ -4,18 +4,20 @@
 
 
 
-# CompleteWeb
+# PIRATE
 
 A Complete Website / Web App Platform with multimedia blog and customizable resume, cover letter and skills and notes pages with integrated contact forms. 
 
-CompleteWeb is built to OPERATE FOR FREE using FREE Cloud Based Services
+Built into PIRATE is also a social network that allows you to interact with other PIRATE users.
 
-## 👌 Features
+PIRATE is built to operate using FREE Cloud Based Services
+
+## Features
 
 - Next-Gen Blogging Platform.
 - State-of-the-art multimdedia/animation layering
 - FULL animated SVG support
-- User-installable PWA (Progressive Web Apps)
+- User-installable PWA (Progressive Web App)
 - Responsive Web Design
 - Dark / Light Mode
 - Customize Resume, Profile, Cover Letter, Skills, Interview Notes and Contact page.
@@ -49,9 +51,13 @@ You can find all the website settings such website Site title, Website URL, Goog
 
 ## 🙏 Thank you
 
-We really appreciate you choosing to build your resume and portfolio with CompleteWeb!
+We really appreciate you choosing to build your resume and portfolio with PIRATE!
 
-[CompleteWeb]: https://CompleteWeb.site
+[CompleteWeb]: https://piratesocial.org
 [gatsby]: https://gatsbyjs.org
 [netlifycms]: https://www.netlifycms.org
-[custom-domain]: https:/CompleteWeb.site/adding-custom-domain-netlify
+[custom-domain]: https:/piratesocial.org/adding-custom-domain-netlify
+
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg)
+

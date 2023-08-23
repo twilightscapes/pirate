@@ -181,9 +181,11 @@ Play Multimedia
         ))}
         
         {visibleItems < data.allMarkdownRemark.edges.length && (
-  <button className="post-card1" style={{ justifyContent: "center", alignItems: "center" }} onClick={showMoreItems}>
-    Show more
-  </button>
+  <div className="" style={{display:'flex', flexDirection:'column', justifyContent:'center', gap:'', height:'50vh'}}>
+        <button className="button load-more" onClick={showMoreItems}>
+          Load more
+        </button>
+        </div>
 )}
       </div>
 

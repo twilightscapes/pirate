@@ -3,13 +3,13 @@ slug: /
 tagline:  Welcome to PIRATE, Matey!
 featuredImage: /assets/pirate-propaganda.webp
 youtube:
-  youtuber: 
-  youtuber2: ""
-  youtubeautostart: false
+  youtuber: "https://youtu.be/iH5sjz0nx9o"
+  youtuber2: "https://youtu.be/yBet3jC7Kss"
+  youtubeautostart: true
   youtubemute: false
   youtubecontrols: false
-  clicktoplay: false
-  customcontrols: false
+  clicktoplay: true
+  customcontrols: true
   youtubestart: ""
   youtubeend: ""
   youtubeloop: true
@@ -40,11 +40,11 @@ profText:
 
 # /assets/shipbg.webp
 
-addressText: "The Fleet Launches Soon!"
+addressText: "Become a Captain"
 portfolio:
   openText: ""
   closeText: ""
-addressText2: ""
+addressText2: "Get it now"
 skillsTitle: ""
 skillsText: 
   <dl>
@@ -69,14 +69,14 @@ skillsText:
   <dd class="percentage percentage-99"><span class="text">Hacking</span> <span class="percent">99%</span></dd>
   </dl>
 cta:
-  ctaText: Reserve Your Galleon
+  ctaText: Contact Me
   ctaLink: /contact
 svgImage: 
 secondaryImage: /assets/default-user.webp
 title: social media by the people for the people
 sharethis: false
 liarliar: false
-bumpertext: "Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha"
+bumpertext: "PIRATE Onboarding Video"
 marate: x
 viewerwarning: x
 marating1: x
@@ -97,8 +97,9 @@ coverletter:
 scrollable: false
 contentinvideo: false
 nftdrop: x
-postLimit: "4"
+postcount: "3"
 pagePW: ""
+id: "2"
 ---
 
 <div style="">

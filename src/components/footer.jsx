@@ -235,7 +235,7 @@ export default function Footer() {
   
 
 <div style={{textAlign: 'center', margin: '0 0 2rem 0', justifyContent: 'center', fontSize: '.75rem'}}>Copyright &copy;
-{/* {(new Date().getFullYear())}  */}
+{(new Date().getFullYear())} 
 &nbsp;
  {companyname}
 </div>
@@ -246,7 +246,7 @@ export default function Footer() {
 <br />
 <br /> */}
 
-<a href="https://completeweb.site" rel="noreferrer">Web App by Complete Web</a> &nbsp; | &nbsp; <a href={speedIt} rel="noreferrer">Site Report Card</a>
+<a href="https://piratesocial.org" rel="noreferrer">Web App by PIRATE</a> &nbsp; | &nbsp; <a href={speedIt} rel="noreferrer">Site Report Card</a>
 </div>
 <br />
 <br />

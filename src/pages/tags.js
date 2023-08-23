@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet"
 import TimeAgo from 'react-timeago'
 import useSiteMetadata from "../hooks/SiteMetadata"
 const TagIndex = ({ data }) => {
+  const { showModals } = useSiteMetadata();
   const { showDates } = useSiteMetadata()
   const { postcount } = useSiteMetadata()
   const [selectedTag, setSelectedTag] = useState(''); // State to keep track of selected tag
@@ -36,7 +37,7 @@ const TagIndex = ({ data }) => {
   return (
     <Layout>
         <Helmet>
-        <body className="tagpage utilitypage" />
+        <body className="tagpage " />
       </Helmet>
       <div className="spacer" style={{ height: '70px', border: '0px solid yellow', }}></div>
 
@@ -56,7 +57,7 @@ const TagIndex = ({ data }) => {
 
        
 
-        <div className="contentpanel grid-container" style={{ marginTop: "" }}>
+        <div className="contentpanel grid-container" style={{justifyContent:'center', alignItems:'center', marginTop:''}}>
           <div className="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }}></div>
    
           {data.allMarkdownRemark.edges &&
@@ -69,44 +70,50 @@ const TagIndex = ({ data }) => {
                 // const { featuredImage } = node.frontmatter;
 
                 return (
-                  <div key={node.fields.slug} className="post-card1" style={{ justifyContent: "center", alignItems: "center" }}>
+                  <div key={node.fields.slug} className="post-card1" style={{  alignItems: "center" }}>
       
-                    <Link className="postlink" to={node.fields.slug}>
+                    <Link className="postlink" state={showModals ? { modal: true } : {}} key={node.fields.slug} to={node.fields.slug}>
 
 {node.frontmatter.featuredImage ? (
-    <GatsbyImage
-      image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-      alt={node.frontmatter.title + " - Featured image"}
-      className="featured-image1"
-      placeholder="blurred"
-      loading="eager"
-      style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
-    />
+          <GatsbyImage
+          image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+          alt={node.frontmatter.title + " - Featured image"}
+          className="featured-image1"
+          placeholder="blurred"
+          loading="eager"
+          style={{ position: 'relative', zIndex: '1', maxHeight: '', margin: '0 auto' }}
+        />
 ) : (
 
-    <StaticImage
-      className="featured-image1"
-      src="../../static/assets/default-og-image.webp"
-      alt="Default Image"
-      style={{ position: 'relative', zIndex: '' }}
-    />
+  <StaticImage
+            className="featured-image1"
+            // src="../../../static/assets/default-og-image.webp"
+            src="../../static/assets/default-og-image.webp"
+            alt="Default Image"
+            style={{ position: 'relative', zIndex: '' }}
+          />
 
 )}
 
 
-<div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'start', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
+<div className="post-content" style={{display:'flex', flexDirection:'column', justifyContent:'center', width:'100%', height:'', position:'relative', background:'', padding:'0', margin:'0 auto 0 auto', textAlign:'center', overFlow:'hidden'}}>
 
-  {node.frontmatter.youtube.youtuber ? (
+{node.frontmatter.youtube.youtuber ? (
 
-<div className="spotlight" style={{border:'0px solid green', }}>
-<div className="posticons" style={{flexDirection:'column', justifyContent:'center', margin:'0 auto'}}>
+
+  <div className="spotlight" style={{marginLeft:'10%', marginTop:'-28%', margin:'-24% 10% 0 10%'}}>
+
+<div className="posticons" style={{flexDirection:'column', margin:'0 auto'}}>
+
 <div style={{display:'flex', justifyContent:'space-around', gap:'2vw', color:'fff', }}>
 <FaImage className="posticon" style={{margin:'0 auto', width:'60%', height:'30px', fontSize:''}} />
 <ImPlay className="posticon" style={{margin:'0 auto', width:'60%', height:'30px', fontSize:''}} />
 <AiOutlinePicLeft className="posticon" style={{margin:'0 auto', width:'60%', height:'30px', fontSize:''}} />
 </div>
+
 Play Multimedia
 </div>
+
 </div>
 
 ) : (
@@ -182,12 +189,7 @@ export const query = graphql`
             }
             featuredImage {
               childImageSharp {
-                gatsbyImageData(
-                  width: 800
-                  quality: 80
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                )
+                gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
               }
             }
           }
