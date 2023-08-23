@@ -4,7 +4,7 @@
 
 
 
-# PIRATE
+# PIRATE [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg)
 
 A Complete Website / Web App Platform with multimedia blog and customizable resume, cover letter and skills and notes pages with integrated contact forms. 
 
@@ -59,5 +59,5 @@ We really appreciate you choosing to build your resume and portfolio with PIRATE
 [custom-domain]: https:/piratesocial.org/adding-custom-domain-netlify
 
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/completeweb-site/base&amp;stack=cms&amp;SITE_LOGO=https://completeweb.site/assets/logo.svg)
+
 
