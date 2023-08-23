@@ -22,6 +22,7 @@ import {
   RiBehanceFill,
 } from "react-icons/ri"
 import { FaWordpress, FaVk } from "react-icons/fa"
+import Xlogo from "../img/xcorp-logo.svg"
 
 
 import { Link } from "gatsby"
@@ -53,7 +54,8 @@ const sIcons = Icons.socialIcons.map((icons, index) => {
       )}
       {icons.icon === "twitter" ? (
         <a aria-label="Link to Twitter" title="Twitter" className="social" href={icons.url} rel="noreferrer" target="_blank">
-          <RiTwitterFill />
+          {/* <RiTwitterFill /> */}
+          <Xlogo style={{maxWidth:'30px'}} />
         </a>
       ) : (
         ""
