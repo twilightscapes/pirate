@@ -23,15 +23,25 @@ audiotitle: "Shoop"
 underlayImage: 
 profText:
 
-  <p>You're the Captain of your domain, steering your Galleon through waves of content, shaping your own journey, and carving out your own corner of the web.</p>
+  <p>PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model.</p>
 
- <p>Set sail with your own custom social media website on the high seas of the Internet.</p>
+ <p>Here's how it works - instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your own platorm.  Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.</p>
 
-  <p>A safe haven for those seeking refuge from corporate influence, central ownership, and censorship.</p>
+ <p>More than just a collection of individual websites, PIRATE uses the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.</p>
+
+ <p>Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about!</p>
+
+ <p>PIRATE gives you the tools to easily edit your homepage, update your profile, and publish engaging posts. It's super easy to get started, without any complicated technical barriers.</p>
+
+#   <p>You're the Captain of your domain, steering your Galleon through waves of content, shaping your own journey, and carving out your own corner of the web.</p>
+
+#  <p>Set sail with your own custom social media website on the high seas of the Internet.</p>
+
+#   <p>A safe haven for those seeking refuge from corporate influence, central ownership, and censorship.</p>
   
-  <p>A place where every word you scribe, every tale you tell, is unequivocally yours and only yours.</p>
+#   <p>A place where every word you scribe, every tale you tell, is unequivocally yours and only yours.</p>
 
-  <p>With PIRATE, you're not just part of a community, you're part of a Social Revolution.</p>
+#   <p>With PIRATE, you're not just part of a community, you're part of a Social Revolution.</p>
 
   # <p style="text-align:center;">Join us, as we raise our black and white Jolly Roger <br /> <span >Signaling to all that the social revolution has begun.</span></p>
   
@@ -98,7 +108,7 @@ scrollable: false
 contentinvideo: false
 nftdrop: x
 postcount: "3"
-pagePW: ""
+pagePW: "todd"
 id: "2"
 ---
 
