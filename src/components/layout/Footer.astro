@@ -19,11 +19,11 @@ const language = await getEntry('language', 'index');
 			aria-label="Menu"
 			class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500"
 		>
-		{showHome && (
+		<!-- {showHome && ( -->
 			<>
 			<a class="px-4 py-2 sm:px-2 sm:py-0 sm:hover:text-textColor sm:hover:underline" href="/" style="color:inherit">{language.data.homelink}</a>
 			</>
-		)}
+		 <!-- )} -->
 			{
 				menuLinks.map((link: { path: string | null; title: string }) => (
 					<>
