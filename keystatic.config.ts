@@ -15,7 +15,7 @@ export default config({
     ? { kind: 'cloud' }
     : { kind: 'local' },
   cloud: isProduction
-    ? { project: process.env.KEYSTATIC_PROJECT || 'pirate/pirate' }
+    ? { project: process.env.KEYSTATIC_PROJECT || 'your/project' }
     : undefined,
   collections: {
     posts: collection({
