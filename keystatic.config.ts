@@ -4,17 +4,13 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 
 
 
-
+const keystatic_config = import.meta.env.KEYSTATIC_PROJECT_CONFIG ? JSON.parse(import.meta.env.KEYSTATIC_PROJECT_CONFIG) : {};
 
 
 const isProduction = process.env.NODE_ENV === 'production';
 export default config({
-  storage: isProduction
-    ? { kind: 'cloud' }
-    : { kind: 'local' },
-    cloud: isProduction
-    ? { project: process.env.KEYSTATIC_PROJECT || 'default-project-name' }
-    : undefined,
+  storage: { kind: 'cloud' },
+  cloud: keystatic_config,
   collections: {
     posts: collection({
       label: 'Posts',
