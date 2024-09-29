@@ -671,15 +671,15 @@ export default config({
 
 
 ui: {
-  brand: {
-    name: ' ',
-    mark: ({ colorScheme }: { colorScheme: string }) => {
-      let path = colorScheme === 'dark'
-        ? '/images/logo/logoImage.svg'
-        : '/images/logo/logoImage.svg';
-      return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
-    },
-  },
+  // brand: {
+  //   name: ' ',
+  //   mark: ({ colorScheme }: { colorScheme: string }) => {
+  //     let path = colorScheme === 'dark'
+  //       ? '/images/logo/logoImage.svg'
+  //       : '/images/logo/logoImage.svg';
+  //     return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
+  //   },
+  // },
   navigation: {
     'Pages and Posts': [
       'home',
