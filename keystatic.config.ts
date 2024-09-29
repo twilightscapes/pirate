@@ -2,15 +2,19 @@ import React from 'react';
 import { config, fields, collection, singleton } from '@keystatic/core';
 import { colorPicker } from './src/components/ColorPicker.tsx';
 
+  console.log('NODE_ENV:', process.env.NODE_ENV);
+  console.log('NETLIFY:', process.env.NETLIFY);
+  console.log('CONTEXT:', process.env.CONTEXT);
+  console.log('KEYSTATIC_PROJECT:', process.env.KEYSTATIC_PROJECT);
 
+  const isProduction = process.env.NODE_ENV === 'production';
 
-const keystatic_config = import.meta.env.KEYSTATIC_PROJECT_CONFIG ? JSON.parse(import.meta.env.KEYSTATIC_PROJECT_CONFIG) : {};
-
-
-const isProduction = process.env.NODE_ENV === 'production';
-export default config({
-  storage: { kind: 'cloud' },
-  cloud: keystatic_config,
+  export default config({
+    storage: isProduction ? { kind: 'cloud' } : { kind: 'local' },
+    cloud: isProduction
+      ? { project: process.env.KEYSTATIC_PROJECT || 'your/project' }
+      : undefined,
+    // ... rest of your config
   collections: {
     posts: collection({
       label: 'Posts',
