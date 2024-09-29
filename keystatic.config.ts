@@ -1,17 +1,21 @@
 import React from 'react';
 import { config, fields, collection, singleton } from '@keystatic/core';
 import { colorPicker } from './src/components/ColorPicker.tsx';
-  console.log('NODE_ENV:', process.env.NODE_ENV);
-  console.log('NETLIFY:', process.env.NETLIFY);
-  console.log('CONTEXT:', process.env.CONTEXT);
-  console.log('KEYSTATIC_PROJECT:', process.env.KEYSTATIC_PROJECT);
 
-  const isProduction = process.env.CONTEXT === 'production';
-  const projectId = process.env.KEYSTATIC_PROJECT || (isProduction ? 'your/project' : 'local-dev-project');
 
-  export default config({
-    storage: isProduction ? { kind: 'cloud' } : { kind: 'local' },
-    cloud: isProduction ? { project: projectId } : undefined,
+
+
+
+
+const isProduction = process.env.NODE_ENV === 'production';
+
+export default config({
+  storage: isProduction
+    ? { kind: 'cloud' }
+    : { kind: 'local' },
+  cloud: isProduction
+    ? { project: process.env.KEYSTATIC_PROJECT || 'your/project' }
+    : undefined,
   collections: {
     posts: collection({
       label: 'Posts',
@@ -667,13 +671,13 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 
 ui: {
   brand: {
-    name: ' PIRATE ',
-    // mark: ({ colorScheme }: { colorScheme: string }) => {
-    //   let path = colorScheme === 'dark'
-    //     ? '/images/logo/logoImage.svg'
-    //     : '/images/logo/logoImage.svg';
-    //   return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
-    // },
+    name: ' ',
+    mark: ({ colorScheme }: { colorScheme: string }) => {
+      let path = colorScheme === 'dark'
+        ? '/images/logo/logoImage.svg'
+        : '/images/logo/logoImage.svg';
+      return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
+    },
   },
   navigation: {
     'Pages and Posts': [
