@@ -5,12 +5,9 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 
 
 
-// const isProduction = process.env.NETLIFY_PRODUCTION === 'true';
-
 
 
 const isProduction = process.env.NODE_ENV === 'production';
-
 export default config({
   storage: isProduction
     ? { kind: 'cloud' }
@@ -18,7 +15,6 @@ export default config({
     cloud: isProduction
     ? { project: process.env.KEYSTATIC_PROJECT || 'default-project-name' }
     : undefined,
-  
   collections: {
     posts: collection({
       label: 'Posts',
@@ -673,15 +669,15 @@ export default config({
 
 
 ui: {
-  // brand: {
-  //   name: ' ',
-  //   mark: ({ colorScheme }: { colorScheme: string }) => {
-  //     let path = colorScheme === 'dark'
-  //       ? '/images/logo/logoImage.svg'
-  //       : '/images/logo/logoImage.svg';
-  //     return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
-  //   },
-  // },
+  brand: {
+    name: ' PIRATE ',
+    // mark: ({ colorScheme }: { colorScheme: string }) => {
+    //   let path = colorScheme === 'dark'
+    //     ? '/images/logo/logoImage.svg'
+    //     : '/images/logo/logoImage.svg';
+    //   return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
+    // },
+  },
   navigation: {
     'Pages and Posts': [
       'home',
