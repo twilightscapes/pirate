@@ -5,6 +5,7 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 
 
 
+// const isProduction = process.env.NETLIFY_PRODUCTION === 'true';
 
 
 const isProduction = process.env.NODE_ENV === 'production';
