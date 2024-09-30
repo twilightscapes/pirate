@@ -20,7 +20,7 @@ export const reader = createReader(process.cwd(), keystaticConfig);
 
 const isVercel = !!process.env.VERCEL;
 const adapter = isVercel ? vercel() : netlify();
-const output = isVercel ? 'static' : 'hybrid';
+const output = isVercel ? 'server' : 'hybrid';
 
 const pwaSettings = await reader.singletons.pwaSettings.read();
 
