@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
 	ogLocale: "en",
 	sortPostsByUpdatedDate: false,
 	webmentions: {
-		link: "https://webmention.io/api/mentions.html?token=GHLsnKigDuMOIfxrocoWkA",
+		link: "https://webmention.io/pirateweb.org/webmention",
 	},
 };
 
