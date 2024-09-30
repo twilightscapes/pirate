@@ -10,7 +10,7 @@ import { getEntry } from 'astro:content';
 import keystaticConfig from '../../keystatic.config';
 import { createReader } from '@keystatic/core/reader';
 import CTAs from '@/components/CTAs.astro';
-
+import SocialList from "@/components/SocialList.astro";
 import InfoBlock from "@/components/InfoBlock.astro";
 
 
@@ -321,6 +321,8 @@ flex-direction: column;
         />
       </section>
     )}
+
+<SocialList />
 	</div>
 </PageLayout>
 
