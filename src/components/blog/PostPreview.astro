@@ -118,9 +118,11 @@ const useCustomPlayer = post.data.youtube?.value?.useCustomPlayer ?? true;
             }}
         >
             {showTitles && (
+                <>
             <h2 class="title" style={{ color: "", fontSize: "clamp(1.3rem, 2.4vw, 1rem)" }}>
                 {post.data.title}
             </h2>
+            </>
             )}
             {withDesc && (
                 <div class="line-clamp-1 block snippet" style={{ display: "none" }}>
