@@ -9,7 +9,7 @@ export default config({
   //   : { kind: 'local' },
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'nope/nope' }
+    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'pirate/pirate' }
     : undefined,
   collections: {
     posts: collection({
