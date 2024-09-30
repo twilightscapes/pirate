@@ -15,7 +15,7 @@ export default config({
   //   : { kind: 'local' },
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.KEYSTATIC_PROJECT || 'pirate/pirate' }
+    ? { project: import.meta.env.KEYSTATIC_PROJECT || 'nope/pirate' }
     : undefined,
   collections: {
     posts: collection({
