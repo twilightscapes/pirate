@@ -18,12 +18,19 @@ const socialLinks: {
 		name: "mdi:github",
 		isWebmention: true,
 	},
+	{
+		friendlyName: "Twitter",
+		link: "https://x.com/toddlambert/",
+		name: "mdi:twitter",
+		isWebmention: true,
+	},
 ];
 ---
 
 <div class="flex flex-wrap items-end gap-x-2">
 	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+		<li class="flex"><a href="mailto:ihatespam@gmail.com" rel="me">ihatespam@gmail.com</a></li>
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
 				<li class="flex">
