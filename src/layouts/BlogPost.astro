@@ -4,7 +4,7 @@ import BlogHero from "@/components/blog/Hero.astro";
 import TOC from "@/components/blog/TOC.astro";
 import BaseLayout from "./Base.astro";
 import GoBack from "@/components/GoBack.astro";
-import WebMentions from "@/components/blog/webmentions/index.astro";
+
 
 interface Props {
 	post: CollectionEntry<"post"> & { data: { youtube?: string } };
@@ -50,7 +50,6 @@ const { headings } = await post.render();
 					} -->
 									<div class="prose prose-lg dark:prose-invert max-w-none">
 										<slot />
-										<WebMentions />
 									</div>
 				</div>
 			</article>
