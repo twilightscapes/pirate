@@ -10,8 +10,8 @@
 		"preview": "astro preview",
 		"format": "prettier -w --cache . && prettier -w --cache **/*.astro",
 		"check": "astro check",
-		"clean": "rm -rf .data dist .astro .netlify node_modules",
-		"pagefind": "pagefind --site .vercel/output/static"
+		"clean": "rm -rf .data dist .astro .netlify node_modules"
+
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.11.4",
