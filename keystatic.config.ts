@@ -1,13 +1,7 @@
 import React from 'react';
 import { config, fields, collection, singleton } from '@keystatic/core';
 import { colorPicker } from './src/components/ColorPicker.tsx';
-
-
-
-
-
-
-const isProduction = process.env.NODE_ENV === 'production';
+// const isProduction = process.env.NODE_ENV === 'production';
 
 export default config({
   // storage: isProduction
@@ -15,7 +9,7 @@ export default config({
   //   : { kind: 'local' },
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.KEYSTATIC_PROJECT || 'nope/pirate' }
+    ? { project: import.meta.env.KEYSTATIC_PROJECT || 'pirate/pirate' }
     : undefined,
   collections: {
     posts: collection({
