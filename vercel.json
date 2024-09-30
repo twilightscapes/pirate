@@ -1,10 +1,12 @@
-
 {
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "pnpm build && pnpm pagefind"
+      }
     }
-  },
-  "installCommand": "pnpm install",
-  "buildCommand": "pnpm build"
+  ]
 }
