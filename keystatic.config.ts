@@ -10,12 +10,13 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default config({
-  storage: isProduction
-    ? { kind: 'cloud' }
-    : { kind: 'local' },
-  // storage: import.meta.env.DEV === true ? { kind: "local" } : { kind: "cloud" },
-  cloud: isProduction
-    ? { project: import.meta.env.KEYSTATIC_PROJECT || 'nope/pirate' }    : undefined,
+  // storage: isProduction
+  //   ? { kind: 'cloud' }
+  //   : { kind: 'local' },
+  storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
+  cloud: import.meta.env.PROD
+    ? { project: import.meta.env.KEYSTATIC_PROJECT || 'pirate/pirate' }
+    : undefined,
   collections: {
     posts: collection({
       label: 'Posts',
