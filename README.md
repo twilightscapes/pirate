@@ -24,7 +24,6 @@ PIRATE is built to OPERATE FOR FREE using FREE Cloud Based Services
 
 - Next-Gen Blogging Platform.
 - State-of-the-art multimdedia/animation layering
-- FULL animated SVG support
 - User-installable PWA (Progressive Web Apps)
 - Add / Modify / Delete posts - no limitations.
 - Edit website settings, seo settings, logos, etc all from within the CMS.
@@ -45,7 +44,7 @@ PIRATE is built to OPERATE FOR FREE using FREE Cloud Based Services
 - [Pagefind](https://pagefind.app/) static search library integration
 - [Astro Icon](https://github.com/natemoo-re/astro-icon) svg icon component
 
-## Demo 💻
+## Demo
 
 Check out the [Demo](https:/pirateweb.org/), hosted on Netlify
 
@@ -74,7 +73,6 @@ More details on configuration and setup of PIRATE through Keystatic is coming so
 
 ## Commands
 
-Requires pnpm and netlify command line for use in local dev enviroment
 
 | Command          | Action                                                         |
 | :--------------- | :------------------------------------------------------------- |
