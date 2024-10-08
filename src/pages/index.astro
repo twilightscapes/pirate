@@ -176,7 +176,8 @@ const ShowApp = homepage?.showApp ?? false;
 const showHomeGallery = homepage?.showHomeGallery ?? false;
 
 const allPosts = await getAllPosts();
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+const allPostsSorted = sortMDByDate(allPosts, true).slice(0, MAX_POSTS);
+
 const language = await getEntry('language', 'index');
 type Section = {
   name: string;
@@ -284,7 +285,9 @@ flex-direction: column;
 								<>
 									<h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent" style="margin-bottom:2vh;">{homeContent.data.postsectiontitle}</h2>
 									<div class={`contentpanel ${defaultView === 'swipe' ? 'slider panels horizontal-slider' : 'grid-container'}`}>
-										{allPostsByDate.map((p) => <PostPreview post={p} withDesc />)}
+									
+
+                    {allPostsSorted.map((p) => <PostPreview post={p} withDesc />)}
 										{ShowMore && (
 											<a class="viewmore no-underline text-white text-center block" href="/posts/" style="padding:1vh 1rem; margin:0 50px 50px 50px;">
 												{language.data.viewmore}

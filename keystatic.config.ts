@@ -24,8 +24,9 @@ export default config({
         draft: fields.checkbox({ label: 'Draft', defaultValue: false }),
         content: fields.markdoc({ label: 'Content' }),
         
+        order: fields.number({ label: 'Sort Order',}),
         publishDate: fields.datetime({ label: 'Publish Date' }),
-        updatedDate: fields.datetime({ label: 'Updated Date' }),
+        // updatedDate: fields.datetime({ label: 'Updated Date' }),
         divider: fields.empty(),
         coverImage: fields.object({
           src: fields.image({

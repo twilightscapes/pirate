@@ -23,12 +23,13 @@ const postSchema = z.object({
   tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
   draft: z.boolean().default(false),
   updatedDate: z
-    .string()
+    .date()
     .optional()
     .transform((str) => (str ? new Date(str) : undefined)),
   ogImage: z.string().optional(),
   videoOnly: z.boolean().optional(),
   externalUrl: z.string().optional(),
+  order: z.number().optional(),
   youtube: z.object({
     discriminant: z.boolean(),
     value: z.object({
