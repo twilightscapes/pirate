@@ -24,7 +24,36 @@ export default config({
         draft: fields.checkbox({ label: 'Draft', defaultValue: false }),
         content: fields.markdoc({ label: 'Content' }),
         
-        order: fields.number({ label: 'Sort Order',}),
+        // order: fields.number({ label: 'Sort Order', validation: { isRequired: false },}),
+
+        // order: fields.text({ 
+        //   label: 'Sort Order',
+        //   description: 'Enter a number for custom ordering, or leave blank',
+        //   validation: {
+        //     length: { min: 0 },
+        //   }
+        // }),
+
+        order: fields.conditional(
+          fields.checkbox({ label: 'Set custom order?' }),
+          {
+            true: fields.number({ label: 'Sort Order' }),
+            false: fields.empty()
+          }
+        ),
+        
+        
+        // order: fields.text({ 
+        //   label: 'Sort Order',
+        //   description: 'Enter a number for custom ordering, or leave blank',
+        //   validation: {
+        //     length: { min: 0 },
+        //     match: /^$|^\d+$/
+        //   }
+        // }),
+        
+        
+
         publishDate: fields.datetime({ label: 'Publish Date' }),
         // updatedDate: fields.datetime({ label: 'Updated Date' }),
         divider: fields.empty(),

@@ -29,7 +29,13 @@ const postSchema = z.object({
   ogImage: z.string().optional(),
   videoOnly: z.boolean().optional(),
   externalUrl: z.string().optional(),
-  order: z.number().optional(),
+
+
+  order: z.object({
+    discriminant: z.boolean(),
+    value: z.number().optional(),
+  }).optional(),
+  
   youtube: z.object({
     discriminant: z.boolean(),
     value: z.object({
