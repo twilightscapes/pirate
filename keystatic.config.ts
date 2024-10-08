@@ -19,44 +19,22 @@ export default config({
       path: 'src/content/post/*/',
       format: { contentField: 'content' },
       schema: {
+        publishDate: fields.datetime({ label: 'Publish Date' }),
         title: fields.slug({ name: { label: 'Title' } }),
         description: fields.text({ label: 'Description', validation: { length: { min: 50, max: 160 } } }),
         draft: fields.checkbox({ label: 'Draft', defaultValue: false }),
-        content: fields.markdoc({ label: 'Content' }),
-        
-        // order: fields.number({ label: 'Sort Order', validation: { isRequired: false },}),
-
-        // order: fields.text({ 
-        //   label: 'Sort Order',
-        //   description: 'Enter a number for custom ordering, or leave blank',
-        //   validation: {
-        //     length: { min: 0 },
-        //   }
-        // }),
-
         order: fields.conditional(
-          fields.checkbox({ label: 'Set custom order?' }),
+          fields.checkbox({ label: 'Make Sticky On Homepage?' }),
           {
             true: fields.number({ label: 'Sort Order' }),
             false: fields.empty()
           }
         ),
-        
-        
-        // order: fields.text({ 
-        //   label: 'Sort Order',
-        //   description: 'Enter a number for custom ordering, or leave blank',
-        //   validation: {
-        //     length: { min: 0 },
-        //     match: /^$|^\d+$/
-        //   }
-        // }),
-        
+        content: fields.markdoc({ label: 'Content' }),
         
 
-        publishDate: fields.datetime({ label: 'Publish Date' }),
         // updatedDate: fields.datetime({ label: 'Updated Date' }),
-        divider: fields.empty(),
+
         coverImage: fields.object({
           src: fields.image({
             label: 'Image file',
@@ -70,7 +48,7 @@ export default config({
 
         externalUrl: fields.text({ label: 'External Url', description: 'A url of an external site will be loaded into an iframe', defaultValue: 'http://', }),
 
-        divider2: fields.empty(),
+
         youtube: fields.conditional(
           fields.checkbox({ label: 'Include YouTube Video' }),
           {
@@ -105,7 +83,8 @@ export default config({
             false: fields.empty(),
           }
         ),
-        divider1: fields.empty(),        tags: fields.array(fields.text({ label: 'Tag' }), {
+        divider1: fields.empty(),        
+        tags: fields.array(fields.text({ label: 'Tag' }), {
           label: 'Tags',
           itemLabel: (props: any) => props.value,        }),
       },
