@@ -88,7 +88,7 @@ More details on configuration and setup of PIRATE through Keystatic is coming so
 
 ## Acknowledgment
 
-This theme was inspired by [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus/)
+This theme was heavily inspired by [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus/)
 
 ## 🙏 Thank you
 

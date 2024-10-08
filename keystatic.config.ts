@@ -347,16 +347,16 @@ export default config({
 
 
         cta: fields.relationship({
-          label: 'FEATURE CTA',
-          description: 'CTA in the Feature Section',
-          collection: 'CTAs',
-        }),
-        divider9: fields.empty(),
-        homeCTA: fields.relationship({
-          label: 'BOTTOM CTA',
+          label: 'HOME BOTTOM CTA',
           description: 'CTA at the bottom of the homepage',
           collection: 'CTAs',
         }),
+        divider9: fields.empty(),
+        // homeCTA: fields.relationship({
+        //   label: 'BOTTOM CTA',
+        //   description: 'CTA at the bottom of the homepage',
+        //   collection: 'CTAs',
+        // }),
         divider7: fields.empty(),
         showBioOnHome: fields.checkbox({
           label: 'Show Bio Module',
