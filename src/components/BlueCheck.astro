@@ -1,7 +1,7 @@
 ---
-const hostname = Astro.url.hostname;
-const isNetlifyApp = hostname.endsWith('netlify.app');
-console.log('Hostname:', hostname);
+const isProduction = import.meta.env.PROD;
+const isNetlifyApp = isProduction && import.meta.env.NETLIFY === 'true';
+console.log('Is Production:', isProduction);
 console.log('Is Netlify App:', isNetlifyApp);
 ---
 <span title="This site is verified">
