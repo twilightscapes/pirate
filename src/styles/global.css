@@ -493,6 +493,8 @@ body.home #gobacker{display: none;}
 
 	  /* body:has(.home) #footer{display: none;} */
 
+	  #footer{padding-bottom: 80px;}
+
 	  body:has(.home) #gobacker{display: none !important;}
 
 	select {
@@ -533,6 +535,7 @@ body.home #gobacker{display: none;}
 		.mobilehide{display:none}
 		.flexbutt{flex-direction:column}
 	  .flexcheek{position:inherit;top:inherit;width:100%}
+	  aside{display: none;}
 	  }
 
 
