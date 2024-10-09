@@ -170,7 +170,8 @@ export default config({
       slugField: 'section',
       format: { contentField: 'content' },
       schema: {
-        section: fields.slug({ name: { label: 'Section' } }),
+        section: fields.slug({ name: { label: 'Title' } }),
+        showTitle: fields.checkbox({ label: 'Show Title', description: 'Hide/Show the section title', defaultValue: true }),
         content: fields.document({
           label: 'Content',
           formatting: true,
@@ -400,6 +401,12 @@ export default config({
 
         showHomeGallery: fields.checkbox({ label: 'Show Home Photo Gallery', description: 'Hide/Show the Photo section on home page', defaultValue: false }),
 
+        showResume: fields.checkbox({
+          label: 'Show Resume',
+          description: 'Hide/Show Resume section on the home page',
+          defaultValue: false,
+        }),
+
 
 
         showPosts: fields.checkbox({ label: 'Show Posts', description: 'Hide/Show the Posts section on the home page', defaultValue: false }),
@@ -435,6 +442,8 @@ export default config({
           collection: 'pitches',
         }),
 
+        
+
         divider1: fields.empty(),
         divider6: fields.empty(),
         
@@ -443,6 +452,7 @@ export default config({
         appOrder: fields.number({ label: 'App Section Order', defaultValue: 3 }),
         galleryOrder: fields.number({ label: 'Gallery Section Order', defaultValue: 4 }),
         postsOrder: fields.number({ label: 'Posts Section Order', defaultValue: 5 }),
+        resumeOrder: fields.number({ label: 'Resume Section Order', defaultValue: 11 }),
         faqOrder: fields.number({ label: 'FAQ Section Order', defaultValue: 6 }),
         testimonialsOrder: fields.number({ label: 'Testimonials Section Order', defaultValue: 7 }),
         infoblockOrder: fields.number({ label: 'Content Block 1 Order', defaultValue: 8 }),
@@ -692,6 +702,8 @@ export default config({
       label: 'Resume Settings',
       path: 'src/content/resumeSettings/',
       schema: {
+        title: fields.text({ label: 'Resume Title' }),
+        showTitle: fields.checkbox({ label: 'Show Title', defaultValue: true }),
         leftColumnItems: fields.array(
           fields.relationship({
             label: 'Left Column Item',
@@ -713,8 +725,7 @@ export default config({
           }
         ),
       },
-    })
-
+    }),
 
 
   },

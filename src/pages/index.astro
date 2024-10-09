@@ -22,9 +22,11 @@ const homeContent = await getEntry('homepage', 'index');
 import App from '@/components/App.astro';
 const reader = createReader(process.cwd(), keystaticConfig);
 
+const resumeSettings = await getEntry('resumeSettings', 'index');
 
 const homepage = await reader.singletons.home.read();
 const cta = homeContent.data.cta ? await getEntry('ctas', homeContent.data.cta) : null;
+const showResume = homepage?.showResume ?? false;
 
 const homeCTA = homeContent.data.cta ? await getEntry('ctas', homeContent.data.cta) : null;
 
@@ -198,7 +200,6 @@ const createSection = (
   order: order ?? defaultOrder,
   component
 });
-
 const sections: Section[] = [
   createSection('feature', homepage?.showFeature, homepage?.featureOrder, Feature, 1),
   createSection('bio', homepage?.showBioOnHome, homepage?.bioOrder, Bio, 2),
@@ -225,7 +226,10 @@ const sections: Section[] = [
     order: homepage?.infoblock3Order ?? 10, 
     component: InfoBlock 
   },
-];const sortedSections = sections  .filter(section => section.show)
+  createSection('resume', homepage?.showResume, homepage?.resumeOrder, Resume, 11),
+];
+
+const sortedSections = sections  .filter(section => section.show)
   .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 ---
 <style>
@@ -248,54 +252,42 @@ flex-direction: column;
 			<section>
 				{(() => {
 					switch (section.name) {
-											case 'feature':
-												return <Feature content={{
-													...homeContent.data,
-													youtube: homeContent.data.youtube?.value,
-													cta: cta ? {
-														title: cta.data.title,
-														description: cta.data.description || '',
-														ctaUrl: cta.data.ctaUrl,
-														showFancy: cta.data.showFancy
-													} : undefined
-												}} />;
+						case 'feature':
+							return <Feature content={{
+								...homeContent.data,
+								youtube: homeContent.data.youtube?.value,
+								cta: cta ? {
+									title: cta.data.title,
+									description: cta.data.description || '',
+									ctaUrl: cta.data.ctaUrl,
+									showFancy: cta.data.showFancy
+								} : undefined
+							}} />;
 						case 'bio':
 							return <Bio />;
 						case 'app':
 							return <App />;
 						case 'gallery':
 							return (<h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent backdrop-blur-lg">{homeContent.data.photosectiontitle}</h2><PhotoSection />);
-	case 'infoblock':
-		return selectedPitch && <InfoBlock pitch={{...selectedPitch, slug: selectedPitch.slug}} />;
-		
-    case 'infoblock2':
-								return (
-													<>
-														{selectedPitch2 && <InfoBlock pitch={{...selectedPitch2, slug: selectedPitch2.slug}} />}
-													</>
-												);
-		case 'infoblock3':
-								return (
-													<>
-														{selectedPitch3 && <InfoBlock pitch={{...selectedPitch3, slug: selectedPitch3.slug}} />}
-													</>
-												);
-    case 'posts':
+						case 'infoblock':
+							return selectedPitch && <InfoBlock pitch={{...selectedPitch, slug: selectedPitch.slug}} />;
+						case 'infoblock2':
 							return (
 								<>
-									<h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent" style="margin-bottom:2vh;">{homeContent.data.postsectiontitle}</h2>
-									<div class={`contentpanel ${defaultView === 'swipe' ? 'slider panels horizontal-slider' : 'grid-container'}`}>
-									
-
-                    {allPostsSorted.map((p) => <PostPreview post={p} withDesc />)}
-										{ShowMore && (
-											<a class="viewmore no-underline text-white text-center block" href="/posts/" style="padding:1vh 1rem; margin:0 50px 50px 50px;">
-												{language.data.viewmore}
-											</a>
-										)}
-									</div>
+									{selectedPitch2 && <InfoBlock pitch={{...selectedPitch2, slug: selectedPitch2.slug}} />}
 								</>
 							);
+						case 'infoblock3':
+							return (
+								<>
+									{selectedPitch3 && <InfoBlock pitch={{...selectedPitch3, slug: selectedPitch3.slug}} />}
+								</>
+							);
+						case 'resume':
+							return <Resume 
+								leftColumnItems={resumeSettings?.data?.leftColumnItems || []}
+								rightColumnItems={resumeSettings?.data?.rightColumnItems || []}
+							/>;
 						case 'faq':
 							return (
 								<>
@@ -310,15 +302,8 @@ flex-direction: column;
 							return null;
 					}
 				})()}
-  
 			</section>
 		))}
-
-
-<Resume 
-  leftColumnItems={['education', 'experience']}
-  rightColumnItems={['skills', 'awards']}
-/>
     
     {homeCTA && (
       <section style="display:grid; place-content:center; padding:10vh 0">

@@ -17,11 +17,17 @@ const rightColumnItems = resumeSettings?.data?.rightColumnItems || [];
 const leftColumn = sortedResumeItems.filter(item => leftColumnItems.includes(item.slug));
 const rightColumn = sortedResumeItems.filter(item => rightColumnItems.includes(item.slug));
 ---
+
+
+{resumeSettings?.data?.showTitle && <h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent" style="margin-bottom:2vh;" data-astro-cid-j7pv25f6="" data-astro-source-file="/Users/toddlambert/SITES/pirate/src/pages/index.astro" data-astro-source-loc="286:123">{resumeSettings.data.title}</h2>}
+
+
 <div class="resume-container">
+  
   <div class="left-column">
     {leftColumn.map(item => (
       <div class="resume-item">
-        <h2 class="headline">{item.data.section}</h2>
+        {item.data.showTitle && <h2 class="headline">{item.data.section}</h2>}
         <item.Content />
       </div>
     ))}
@@ -29,7 +35,7 @@ const rightColumn = sortedResumeItems.filter(item => rightColumnItems.includes(i
   <div class="right-column">
     {rightColumn.map(item => (
       <div class="resume-item">
-        <h2 class="headline">{item.data.section}</h2>
+        {item.data.showTitle && <h2 class="headline">{item.data.section}</h2>}
         <item.Content />
       </div>
     ))}

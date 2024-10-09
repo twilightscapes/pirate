@@ -8,6 +8,7 @@ cta: become a pirate
 showBioOnHome: true
 showApp: false
 showHomeGallery: false
+showResume: false
 showPosts: true
 showMore: true
 showFaqOnHome: true
@@ -20,6 +21,7 @@ bioOrder: 2
 appOrder: .nan
 galleryOrder: .nan
 postsOrder: 7
+resumeOrder: 8
 faqOrder: 6
 testimonialsOrder: 9
 infoblockOrder: 3

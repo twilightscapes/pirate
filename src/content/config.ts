@@ -265,12 +265,15 @@ const resume = defineCollection({
   schema: z.object({
     section: z.string(),
     order: z.number(),
+    showTitle: z.boolean().optional()
   }),
 });
 
 const resumeSettings = defineCollection({
   type: 'data',
   schema: z.object({
+    title: z.string().optional(),
+    showTitle: z.boolean().optional(),
     leftColumnItems: z.array(z.string()),
     rightColumnItems: z.array(z.string()),
   }),
