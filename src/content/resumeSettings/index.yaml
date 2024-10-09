@@ -1,8 +1,8 @@
-title: My Resume
+title: Your Resume Online
 showTitle: true
 leftColumnItems:
   - highlights
-  - education
   - proficiency
+  - education
 rightColumnItems:
   - experience

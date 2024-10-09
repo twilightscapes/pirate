@@ -1,10 +1,10 @@
 logoImage: /images/logo/logoImage.svg
 showHeader: true
 showLogo: true
-showHome: false
+showHome: true
 showTheme: true
 showSwitch: true
-showSearch: false
+showSearch: true
 showFooter: true
 defaultView: swipe
 showTitles: true

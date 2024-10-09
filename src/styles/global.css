@@ -234,7 +234,7 @@ body {
 	  
 	  header.header {height:0;}
 
-	  #missioncontrol{line-height: 1; position:fixed; top:8px; right:4px; z-index:10; color:#fff; fill:#fff; background: var(--theme-header); padding:4px 6px; border-radius:var(--border-radius); opacity:.95; }
+	  #missioncontrol{line-height: 1; position:fixed; bottom:0; left:0; right:0; z-index:10; color:#fff; fill:#fff; background: var(--theme-header); padding:1vh 2vw; border-radius:var(--border-radius); border-bottom-right-radius: 0; border-bottom-left-radius: 0; opacity:.95; }
 	  
 	  
 	  .flexbutt{display:flex; }
@@ -502,7 +502,7 @@ body {
 
 	  
 	  #menu{
-		position:sticky;
+		position:relatuve;
 		width: 100vw;
 		top:0;
 		left:0;

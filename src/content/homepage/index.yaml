@@ -1,4 +1,4 @@
-showFeature: true
+showFeature: false
 featureImage:
   src: /images/homepage/featureImage/src.webp
   alt: Become A PIRATE!
@@ -6,13 +6,13 @@ youtube:
   discriminant: false
 cta: become a pirate
 showBioOnHome: true
-showApp: false
+showApp: true
 showHomeGallery: false
-showResume: false
+showResume: true
 showPosts: true
 showMore: true
 showFaqOnHome: true
-showTestOnHome: false
+showTestOnHome: true
 pitch: How It Works
 pitch2: Social Media That YOU Control
 pitch3: High Seas Freedom
@@ -28,6 +28,6 @@ infoblockOrder: 3
 infoblock2Order: 4
 infoblock3Order: 5
 photosectiontitle: Photo Gallery
-faqsectiontitle: Questions for Pirates
+faqsectiontitle: Questions about PIRATE?
 testimonialtitle: What the dogs are sayin'
-postsectiontitle: Some other PIRATES
+postsectiontitle: Learn more about PIRATE
