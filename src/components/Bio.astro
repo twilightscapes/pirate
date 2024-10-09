@@ -4,7 +4,7 @@ import { getEntry } from 'astro:content';
 const bioContent = await getEntry('bio', 'index');
 import { Image } from 'astro:assets';
 import CTAs from '@/components/CTAs.astro';
-
+import SocialList from "@/components/SocialList.astro";
 const cta = bioContent.data.cta ? await getEntry('ctas', bioContent.data.cta) : null
 
 
@@ -60,5 +60,6 @@ const cta = bioContent.data.cta ? await getEntry('ctas', bioContent.data.cta) : 
               )}
         </div>
       </div>
+      <SocialList />
     </article>
 </sectio>

@@ -252,8 +252,10 @@ body {
 		border-radius:var(--border-radius);
 	  }
 
+#gobacker.button{margin:0;}
 
-	  #gobacker{position:fixed; display:flex;  right:10px; z-index:5; top:65px;}
+body.home #gobacker{display: none;}
+	  /* #gobacker{position:fixed; display:flex;  right:10px; z-index:5; top:65px;} */
 	  
 	  .backimage{
 		height: 100vh;
@@ -489,7 +491,9 @@ body {
 
 	  body:has(.header) #directorySelect{top:5px !important;}
 
-	  body:has(.home) #footer{display: none;}
+	  /* body:has(.home) #footer{display: none;} */
+
+	  body:has(.home) #gobacker{display: none !important;}
 
 	select {
 		--webkit-appearance: none;
