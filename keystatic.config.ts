@@ -165,7 +165,7 @@ export default config({
 
 
     resume: collection({
-      label: 'Resume',
+      label: 'Resume Blocks',
       path: 'src/content/resume/*',
       slugField: 'section',
       format: { contentField: 'content' },
@@ -178,7 +178,6 @@ export default config({
           dividers: true,
           links: true,
         }),
-        order: fields.number({ label: 'Order' }),
       },
     }),
 

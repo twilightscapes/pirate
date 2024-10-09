@@ -1,31 +1,36 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
 
 const allResumeItems = await getCollection('resume');
-const sortedResumeItems = await Promise.all(allResumeItems.map(async (item) => {
-  const { Content } = await item.render();
-  return { ...item, Content };
-}));
-sortedResumeItems.sort((a, b) => a.data.order - b.data.order);
-
 const resumeSettings = await getEntry('resumeSettings', 'index');
 
 const leftColumnItems = resumeSettings?.data?.leftColumnItems || [];
 const rightColumnItems = resumeSettings?.data?.rightColumnItems || [];
 
-const leftColumn = sortedResumeItems.filter(item => leftColumnItems.includes(item.slug));
-const rightColumn = sortedResumeItems.filter(item => rightColumnItems.includes(item.slug));
+function sortResumeItems(items: CollectionEntry<'resume'>[], order: string[]): CollectionEntry<'resume'>[] {
+  return order.map(slug => items.find(item => item.slug === slug)).filter((item): item is CollectionEntry<'resume'> => item !== undefined);
+}
+
+const leftColumn = sortResumeItems(allResumeItems, leftColumnItems);
+const rightColumn = sortResumeItems(allResumeItems, rightColumnItems);
+
+// Render the content for each item
+const renderContent = async (items: CollectionEntry<'resume'>[]) => {
+  return Promise.all(items.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  }));
+};
+
+const leftColumnRendered = await renderContent(leftColumn);
+const rightColumnRendered = await renderContent(rightColumn);
 ---
 
-
 {resumeSettings?.data?.showTitle && <h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent" style="margin-bottom:2vh;" data-astro-cid-j7pv25f6="" data-astro-source-file="/Users/toddlambert/SITES/pirate/src/pages/index.astro" data-astro-source-loc="286:123">{resumeSettings.data.title}</h2>}
-
-
 <div class="resume-container">
-  
   <div class="left-column">
-    {leftColumn.map(item => (
+    {leftColumnRendered.map(item => (
       <div class="resume-item">
         {item.data.showTitle && <h2 class="headline">{item.data.section}</h2>}
         <item.Content />
@@ -33,7 +38,7 @@ const rightColumn = sortedResumeItems.filter(item => rightColumnItems.includes(i
     ))}
   </div>
   <div class="right-column">
-    {rightColumn.map(item => (
+    {rightColumnRendered.map(item => (
       <div class="resume-item">
         {item.data.showTitle && <h2 class="headline">{item.data.section}</h2>}
         <item.Content />

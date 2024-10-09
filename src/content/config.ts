@@ -264,7 +264,6 @@ const resume = defineCollection({
   type: 'content',
   schema: z.object({
     section: z.string(),
-    order: z.number(),
     showTitle: z.boolean().optional()
   }),
 });
