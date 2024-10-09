@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import BlogHero from "@/components/blog/Hero.astro";
 import TOC from "@/components/blog/TOC.astro";
 import BaseLayout from "./Base.astro";
-// import GoBack from "@/components/GoBack.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 
 interface Props {
@@ -28,7 +27,7 @@ const { headings } = await post.render();
 	}
 </style>
 <BaseLayout title={title} description={description} articleDate={articleDate} ogImage={socialImage}>
-<!-- <GoBack /> -->
+
 	<div class="gap-x-10 lg:flex lg:items-start" >
 		
 		

@@ -2,6 +2,7 @@
 import ThemeToggle from "../ThemeToggle.astro";
 import Search from "../Search.astro";
 import Switch from "@/components/Switch.jsx";
+import BlueCheck from "@/components/BlueCheck.astro";
 import { getEntry } from 'astro:content';
 import { getMenuLinks, siteConfig } from "@/site-config";
 import GoBack from "@/components/GoBack.astro";
@@ -63,6 +64,9 @@ const menuLinks = await getMenuLinks();
 
 <div id="missioncontrol" class="missioncontrol sitecontrols flex justify-around items-center gap-3 pr-2.5">
   
+
+<BlueCheck />
+
   {showHome && (
   <button
   aria-label="Return to Home"

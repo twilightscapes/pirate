@@ -63,11 +63,10 @@ const pageOgImage = ogImage || meta?.ogImage;
 		<Header transition:persist />
 				<main id="main">
 					<slot />
-					{ showFooter && (
-						<Footer />
-						)}
 				</main>
-		
+				{ showFooter && (
+					<Footer />
+					)}
 								</body>
 								<script>
 									function initializeScrollListener() {
