@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import { getEntry } from 'astro:content';
+
+const allResumeItems = await getCollection('resume');
+const sortedResumeItems = await Promise.all(allResumeItems.map(async (item) => {
+  const { Content } = await item.render();
+  return { ...item, Content };
+}));
+sortedResumeItems.sort((a, b) => a.data.order - b.data.order);
+
+const resumeSettings = await getEntry('resumeSettings', 'index');
+
+const leftColumnItems = resumeSettings?.data?.leftColumnItems || [];
+const rightColumnItems = resumeSettings?.data?.rightColumnItems || [];
+
+const leftColumn = sortedResumeItems.filter(item => leftColumnItems.includes(item.slug));
+const rightColumn = sortedResumeItems.filter(item => rightColumnItems.includes(item.slug));
+---
+<div class="resume-container">
+  <div class="left-column">
+    {leftColumn.map(item => (
+      <div class="resume-item">
+        <h2 class="headline">{item.data.section}</h2>
+        <item.Content />
+      </div>
+    ))}
+  </div>
+  <div class="right-column">
+    {rightColumn.map(item => (
+      <div class="resume-item">
+        <h2 class="headline">{item.data.section}</h2>
+        <item.Content />
+      </div>
+    ))}
+  </div>
+</div>
+<style>
+  .resume-container {
+    display: flex;
+    gap: 2rem;
+    padding:2vw 2vh;
+  }
+  .left-column, .right-column {
+    flex: 1;
+  }
+  .resume-item {
+    margin-bottom: 1rem;
+  }
+  .resume-item :global(h2),
+  .resume-item :global(h3),
+  .resume-item :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  .resume-container h2.headline {font-size: 200%;}
+
+  @media (max-width: 768px) {
+    .resume-container {
+      flex-direction: column;
+    }
+    .left-column, .right-column {
+      width: 100%;
+    }
+  }
+</style>

@@ -162,6 +162,26 @@ export default config({
         order: fields.number({ label: 'Order' }),
       },
     }),
+
+
+    resume: collection({
+      label: 'Resume',
+      path: 'src/content/resume/*',
+      slugField: 'section',
+      format: { contentField: 'content' },
+      schema: {
+        section: fields.slug({ name: { label: 'Section' } }),
+        content: fields.document({
+          label: 'Content',
+          formatting: true,
+          dividers: true,
+          links: true,
+        }),
+        order: fields.number({ label: 'Order' }),
+      },
+    }),
+
+
     testimonials: collection({
       label: 'Testimonials',
       path: 'src/content/testimonials/*',
@@ -665,6 +685,38 @@ export default config({
       },
     }),
 
+
+
+
+    resumeSettings: singleton({
+      label: 'Resume Settings',
+      path: 'src/content/resumeSettings/',
+      schema: {
+        leftColumnItems: fields.array(
+          fields.relationship({
+            label: 'Left Column Item',
+            collection: 'resume',
+          }),
+          {
+            label: 'Left Column Items',
+            itemLabel: (props) => props.value || 'Resume Item',
+          }
+        ),
+        rightColumnItems: fields.array(
+          fields.relationship({
+            label: 'Right Column Item',
+            collection: 'resume',
+          }),
+          {
+            label: 'Right Column Items',
+            itemLabel: (props) => props.value || 'Resume Item',
+          }
+        ),
+      },
+    })
+
+
+
   },
 
 
@@ -695,6 +747,7 @@ ui: {
       'testimonials',
       'pitches',
       'CTAs',
+      'resume',
     ],
     'Settings': [
       'siteSettings',
@@ -704,9 +757,12 @@ ui: {
       'photoSettings',
       'styleAppearance',
       'language',
+      'resumeSettings',
     ],
     'Pirate Social': [
       'pirateSocial',
     ],
   },
 },});
+
+

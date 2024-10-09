@@ -58,6 +58,7 @@ const postCollection = defineCollection({
   type: "content",
 });
 
+
 const faqs = defineCollection({
   type: 'content',
   schema: z.object({
@@ -259,6 +260,22 @@ const CTAs = defineCollection({
   }),
 });
 
+const resume = defineCollection({
+  type: 'content',
+  schema: z.object({
+    section: z.string(),
+    order: z.number(),
+  }),
+});
+
+const resumeSettings = defineCollection({
+  type: 'data',
+  schema: z.object({
+    leftColumnItems: z.array(z.string()),
+    rightColumnItems: z.array(z.string()),
+  }),
+});
+
 export const collections = {
   post,
   faqs, 
@@ -269,6 +286,8 @@ export const collections = {
   menuItems,
   pitches,
   CTAs: CTAs,
+  resume,
+  resumeSettings,
 };
 
 
@@ -290,3 +309,5 @@ export type PitchData = {
   divider: string | null;
   divider2: string | null;
 };
+
+
