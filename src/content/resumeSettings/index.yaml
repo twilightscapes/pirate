@@ -1,5 +1,7 @@
 title: Your Resume Online
 showTitle: true
+name: My Name
+contact: (222) 555-1212
 leftColumnItems:
   - highlights
   - proficiency
